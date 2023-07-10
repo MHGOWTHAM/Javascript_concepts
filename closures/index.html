@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of Js</title>
+    
+</head>
+<body>
+
+
+
+    <div class="a" id="root">
+        <p class="c">Some Para</p>
+        <div class="b" id="parent">
+            <div id="child"></div>
+        </div>
+    </div>
+
+
+    <!-- 
+        Every element html is a node =>object(js obj)
+        <div class="b" id="parent">
+            <div id="child"></div>
+            <p class="c">Some Para</p>
+        </div>
+
+        {
+            tagName:"div",
+            className:"b",
+            id:"parent",
+            style:{
+                color:"red",
+                display:"none"
+            }
+            children:[
+                {
+                    tag:"div",
+                    id:"child",
+                },
+                {
+                    tag:"p",
+                    class:"c",
+                    innerText:"some para"
+                }
+            ]
+        }
+
+        DOM ---=> Document object model
+     -->
+
+
+    <script src="closure.js"></script>
+    <!-- <script src="block.js"></script> -->
+    <!-- <script src="./this.js"></script>  -->
+</body>
+</html>

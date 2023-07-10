@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Basics</title>
+    <style>
+        .skills-container{
+            padding: 10px;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            gap: 5px;
+        }
+        input{
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .chip{
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            padding: 0px 10px;
+            cursor: pointer;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="skills-container" id="container">
+        <input type="text" placeholder="Enter the Skills">
+    </div>
+    <script>
+        const skillsContainer = document.getElementById("container");
+        const inputElement = document.getElementsByTagName("input")[0];
+        const addedSkills = [];
+        inputElement.addEventListener("keyup",(e)=>{
+            const enteredValue = inputElement.value.trim();
+            const key=e.key;
+           
+            if(key==='Enter' && enteredValue){
+                const b=document.createElement("b"); 
+                b.innerText=enteredValue;
+                b.className="chip";
+                addedSkills.push(enteredValue);
+                addNewElementAtFront();
+                inputElement.value="";
+            }
+            key==="Enter" && (!enteredValue) && (inputElement.value="")
+        })
+        
+        function addNewElementAtFront(){
+            skillsContainer.innerHTML='';
+            for(let i=0;i<addedSkills.length;i++){
+                const b=document.createElement("b"); 
+                b.innerText=addedSkills[i];
+                b.className="chip";
+                b.addEventListener("click",removeElement);
+                skillsContainer.appendChild(b);
+            }
+            skillsContainer.appendChild(inputElement);
+        }
+        
+        function removeElement(e){
+            const targetElement=e.target;
+            const text=targetElement.innerText;
+            let index = addedSkills.indexOf(text);
+            addedSkills.splice(index,1);
+            e.target.remove(); //addNewElementAtFront();  => both works the same
+        }
+
+
+    </script> -->
+    <script src="script.js"></script>
+</body>
+</html>

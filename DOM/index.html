@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .modal{
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgb(63, 61, 61);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-body{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            background-color: rgb(241, 168, 57);
+            border-radius: 10px;
+            box-shadow: 1px 1px, 2px 5px gray;
+        }
+        input{
+            border: 1px solid rgb(163, 158, 158);
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+
+
+    <div class="modal" id="modal">
+        <div class="modal-body">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <button onclick="closeModal()">Submit</button>
+        </div>
+    </div>
+
+    <button onclick="openModal()">Add Element</button>
+
+
+
+     <section class="parent" id="parent">
+        Parent Element
+        <b>Bold Text</b>
+        <div class="child">
+             Child Element
+            <div class="child test">Test Element</div>
+        </div>
+        <div class="sibling" >
+            Sibling Element
+        </div>
+    </section>
+
+    <button onclick="change()">Change the color</button> 
+
+     <!-- DOM  => Document Object Model  -->
+     <button id="btn" onclick="change()">Change the text</button>
+    <p id="abu" class="danger">Abu</p> 
+   <!-- behind the scenes the above p is an obj #100 got stored in the heap memory   -->
+    
+
+    <script src="./dom.js"></script>
+</body>
+</html>
